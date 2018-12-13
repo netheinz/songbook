@@ -98,11 +98,6 @@ switch(strtoupper($mode)) {
 	    //Henter ID fra GET - UPDATE hvis id er større end 0 ellers CREATE
 		$id = isset($_GET["id"]) && !empty($_GET["id"]) ? (int)$_GET["id"] : 0;
 
-		//Sætter button panel
-		$arr_buttons = [
-			getButton("Oversigt", "song.php"),
-		];
-
 		//Definerer sidetitel ud fra create/update
 		$mode_title = ($id > 0) ? "Rediger" : "Opret ny sang";
 
@@ -133,6 +128,11 @@ switch(strtoupper($mode)) {
 
 
 		sysHeader();
+
+		//Sætter button panel
+		$arr_buttons = [
+			getButton("Oversigt", "song.php"),
+		];
 
 		echo getAdminHeader($page_title, "Opret ny sang", $arr_buttons);
 
@@ -209,4 +209,53 @@ switch(strtoupper($mode)) {
         header("Location: ?mode=details&id=" . $id);
 
 	    break;
+
+    case "DELETE":
+	    //Henter ID fra GET
+	    $id = isset($_GET["id"]) && !empty($_GET["id"]) ? (int)$_GET["id"] : 0;
+
+	    //Henter sang
+	    if($id > 0) {
+		    $sql  = "SELECT * FROM song " .
+		            "WHERE id = :id";
+		    $stmt = $db->prepare( $sql );
+		    $stmt->bindParam( ":id", $id );
+		    $stmt->execute();
+		    $row = $stmt->fetch( PDO::FETCH_ASSOC );
+	    }
+	    sysHeader();
+
+	    //Sætter button panel
+	    $arr_buttons = [
+		    getButton("Oversigt", "song.php"),
+	    ];
+
+	    echo getAdminHeader($page_title, "Slet sang", $arr_buttons);
+
+	    ?>
+        <form method="post" action="?mode=dodelete">
+            <input type="hidden" name="id" value="<?php echo $id ?>">
+            <p>Vil du virkelig slette sangen <i><?php echo $row["title"] ?></i></p>
+            <button type="submit">Slet</button>
+            <button type="button" onclick="document.location.href='?mode=list'">Annuller</button>
+        </form>
+	    <?php
+
+	    sysFooter();
+        break;
+
+    case "DODELETE":
+	    //Henter ID fra GET
+	    $id = isset($_POST["id"]) && !empty($_POST["id"]) ? (int)$_POST["id"] : 0;
+
+	    if($id) {
+	        $sql = "DELETE FROM song WHERE id = :id";
+	        $stmt = $db->prepare($sql);
+	        $stmt->bindParam(":id", $id);
+	        $stmt->execute();
+	        header("Location: ?mode=list");
+        }
+
+
+        break;
 }
