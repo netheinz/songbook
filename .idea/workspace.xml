@@ -1,7 +1,120 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1b5e7e6e-04ed-4407-90f7-3b54c26d47e0" name="Default Changelist" comment="" />
+    <list default="true" id="1b5e7e6e-04ed-4407-90f7-3b54c26d47e0" name="Default Changelist" comment="Update">
+      <change afterPath="$PROJECT_DIR$/../Adminsite/public_html/.htaccess" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public_html/admin/artist.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/arrays/assets/js/arrays.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/arrays/fetch-example/data.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/arrays/fetch-example/fetch-example.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/arrays/fetch-example/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/arrays/fetch-example/songs.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/arrays/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/keyboard-events/assets/js/keyboard-events.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/keyboard-events/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory2018/assets/images/cards/dogs/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory2018/assets/images/cards/dogs/10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory2018/assets/images/cards/dogs/11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory2018/assets/images/cards/dogs/12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory2018/assets/images/cards/dogs/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory2018/assets/images/cards/dogs/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory2018/assets/images/cards/dogs/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory2018/assets/images/cards/dogs/5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory2018/assets/images/cards/dogs/6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory2018/assets/images/cards/dogs/7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory2018/assets/images/cards/dogs/8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory2018/assets/images/cards/dogs/9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory2018/assets/js/memory.backup071118" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory2018/assets/js/memory.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory2018/assets/sass/_animations.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory2018/assets/sass/_backgrounds.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory2018/assets/sass/master.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/rollthedice/assets/css/dice.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/rollthedice/assets/js/dice-array.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/rollthedice/assets/js/dice-visual.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/rollthedice/assets/js/dice.bak" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/rollthedice/assets/js/dice.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/rollthedice/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/tracking/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../snippets/public_html/assets/sass/test.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../snippets/public_html/samples_apr18/arrays.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../snippets/public_html/samples_apr18/js/arrays.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Adminsite/.idea/Adminsite.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Adminsite/.idea/Adminsite.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Adminsite/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Adminsite/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Adminsite/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Adminsite/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Adminsite/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Adminsite/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Adminsite/core/classes/person.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Adminsite/core/classes/person.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Adminsite/public_html/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Adminsite/public_html/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Songbook.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Songbook.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/classes/Song.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/classes/Artist.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/admin/song.php" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/admin/song.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/css/style.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/css/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/css/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/incl/init.php" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/incl/init.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../snippets/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../snippets/.idea/deployment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../snippets/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../snippets/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../snippets/.idea/snippets.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../snippets/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../snippets/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../snippets/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../snippets/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../snippets/JQXamples/public_html/tutorials/javascript/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../snippets/JQXamples/public_html/tutorials/javascript/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../snippets/public_html/archive/css/animations.php" beforeDir="false" afterPath="$PROJECT_DIR$/../snippets/public_html/archive/css/animations.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../snippets/public_html/archive/css/filters.php" beforeDir="false" afterPath="$PROJECT_DIR$/../snippets/public_html/archive/css/filters.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../snippets/public_html/archive/css/linear_gradient.php" beforeDir="false" afterPath="$PROJECT_DIR$/../snippets/public_html/archive/css/linear_gradient.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../snippets/public_html/archive/css/radial_gradient.php" beforeDir="false" afterPath="$PROJECT_DIR$/../snippets/public_html/archive/css/radial_gradient.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../snippets/public_html/archive/css/shadows.php" beforeDir="false" afterPath="$PROJECT_DIR$/../snippets/public_html/archive/css/shadows.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../snippets/public_html/archive/css/transform2d.php" beforeDir="false" afterPath="$PROJECT_DIR$/../snippets/public_html/archive/css/transform2d.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../snippets/public_html/archive/css/transform3d.php" beforeDir="false" afterPath="$PROJECT_DIR$/../snippets/public_html/archive/css/transform3d.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../snippets/public_html/archive/css/transitions.php" beforeDir="false" afterPath="$PROJECT_DIR$/../snippets/public_html/archive/css/transitions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/dropdown/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/_dropdown/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/dropdown/js/dropdowns.js" beforeDir="false" afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/_dropdown/js/dropdowns.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/dropdown/sass/dropdowns.css" beforeDir="false" afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/_dropdown/sass/dropdowns.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/dropdown/sass/dropdowns.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/_dropdown/sass/dropdowns.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/dropdown/sass/dropdowns.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/_dropdown/sass/dropdowns.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/looppatterns/looppatterns.js" beforeDir="false" afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/looppatterns/looppatterns.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory2018/images/cards/Untitled-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory2018/images/cards/tile1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory2018/assets/images/cards/funny-sport-faces/img1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory2018/images/cards/tile10.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory2018/assets/images/cards/funny-sport-faces/img10.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory2018/images/cards/tile11.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory2018/assets/images/cards/funny-sport-faces/img11.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory2018/images/cards/tile12.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory2018/assets/images/cards/funny-sport-faces/img12.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory2018/images/cards/tile2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory2018/assets/images/cards/funny-sport-faces/img2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory2018/images/cards/tile3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory2018/assets/images/cards/funny-sport-faces/img3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory2018/images/cards/tile4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory2018/assets/images/cards/funny-sport-faces/img4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory2018/images/cards/tile5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory2018/assets/images/cards/funny-sport-faces/img5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory2018/images/cards/tile6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory2018/assets/images/cards/funny-sport-faces/img6.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory2018/images/cards/tile7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory2018/assets/images/cards/funny-sport-faces/img7.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory2018/images/cards/tile8.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory2018/assets/images/cards/funny-sport-faces/img8.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory2018/images/cards/tile9.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory2018/assets/images/cards/funny-sport-faces/img9.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory2018/images/dark_wood.png" beforeDir="false" afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory2018/assets/images/gamebgs/dark_wood.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory2018/images/dark_wood_@2X.png" beforeDir="false" afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory2018/assets/images/gamebgs/dark_wood_@2X.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory2018/images/ravenna.png" beforeDir="false" afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory2018/assets/images/gamebgs/ravenna.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory2018/images/ravenna_@2X.png" beforeDir="false" afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory2018/assets/images/gamebgs/ravenna_@2X.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory2018/images/tilebgs/abstrakt-tile.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory2018/assets/images/cardbgs/abstrakt-tile.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory2018/images/tilebgs/bonfire.png" beforeDir="false" afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory2018/assets/images/cardbgs/bonfire.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory2018/images/tilebgs/hot-pink-damask.gif" beforeDir="false" afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory2018/assets/images/cardbgs/hot-pink-damask.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory2018/images/tilebgs/intertwined.gif" beforeDir="false" afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory2018/assets/images/cardbgs/intertwined.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory2018/images/tilebgs/transmit.gif" beforeDir="false" afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory2018/assets/images/cardbgs/transmit.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory2018/images/trans.png" beforeDir="false" afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory2018/assets/images/gamebgs/trans.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory2018/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory2018/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory2018/memory.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory2018/sass/_helpers.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory2018/assets/sass/_helpers.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory2018/sass/memory.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory2018/sass/memory.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory_orig/css/memory.css" beforeDir="false" afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory_orig/css/memory.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory_orig/js/memory.js" beforeDir="false" afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory_orig/js/memory.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory_orig/js/memory_work.js" beforeDir="false" afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/memory_orig/js/memory_work.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/pascisto/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/pascisto/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/pascisto/pascisto.css" beforeDir="false" afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/pascisto/pascisto.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/shadowheader/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/shadowheader/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/shopcart/shopcart.css" beforeDir="false" afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/shopcart/shopcart.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/shopcart/shopcart.js" beforeDir="false" afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/shopcart/shopcart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../snippets/public_html/archive/php/csvparser/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/../snippets/public_html/archive/php/csvparser/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../snippets/public_html/archive/tutorials/javascript/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../snippets/public_html/archive/tutorials/javascript/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../snippets/public_html/assets/incl/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/../snippets/public_html/assets/incl/header.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,12 +125,12 @@
     <session id="430536073">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="6" />
+          <entry key="project.closed" value="7" />
           <entry key="project.open.time.0" value="3" />
           <entry key="project.open.time.5" value="1" />
-          <entry key="project.open.time.6" value="2" />
+          <entry key="project.open.time.6" value="3" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.opened" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -30,8 +143,8 @@
         <counts>
           <entry key="CSS" value="5" />
           <entry key="HTML" value="2" />
-          <entry key="PHP" value="35" />
-          <entry key="SCSS" value="7" />
+          <entry key="PHP" value="37" />
+          <entry key="SCSS" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -42,9 +155,9 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="1" />
-          <entry key="PHP" value="4487" />
-          <entry key="PLAIN_TEXT" value="26" />
-          <entry key="SCSS" value="558" />
+          <entry key="PHP" value="7628" />
+          <entry key="PLAIN_TEXT" value="117" />
+          <entry key="SCSS" value="718" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.php.new.class">
@@ -56,15 +169,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public_html/assets/incl/header.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public_html/assets/incl/footer.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -88,26 +192,49 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public_html/admin/song.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="532">
-              <caret line="130" column="25" selection-start-line="130" selection-start-column="25" selection-end-line="130" selection-end-column="25" />
+            <state relative-caret-position="-10">
+              <caret line="38" column="34" selection-start-line="38" selection-start-column="34" selection-end-line="38" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/classes/Artist.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
               <folding>
-                <element signature="e#217#1775#0#PHP" />
-                <element signature="e#1751#2985#0#PHP" />
-                <element signature="e#2713#2756#0#PHP" />
+                <element signature="e#6#87#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public_html/admin/artist.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="608">
+              <caret line="71" column="24" selection-start-line="71" selection-start-column="24" selection-end-line="71" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public_html/assets/css/style.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+            <state relative-caret-position="363">
+              <caret line="45" column="15" selection-start-line="45" selection-start-column="15" selection-end-line="45" selection-end-column="15" />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../games/src/sass/master.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-59" />
           </provider>
         </entry>
       </file>
@@ -123,8 +250,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public_html/assets/incl/init.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="30" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
+            <state relative-caret-position="75">
+              <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -140,7 +267,8 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../Adminsite" />
+    <option name="ROOT_SYNC" value="SYNC" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -151,15 +279,17 @@
         <option value="$PROJECT_DIR$/public_html/index.php" />
         <option value="$PROJECT_DIR$/public_html/search.php" />
         <option value="$PROJECT_DIR$/public_html/save.php" />
-        <option value="$PROJECT_DIR$/public_html/assets/incl/init.php" />
         <option value="$PROJECT_DIR$/core/Song.php" />
         <option value="$PROJECT_DIR$/public_html/create.php" />
         <option value="$PROJECT_DIR$/public_html/song.php" />
         <option value="$PROJECT_DIR$/core/functions.php" />
         <option value="$PROJECT_DIR$/public_html/assets/incl/header.php" />
         <option value="$PROJECT_DIR$/public_html/assets/incl/footer.php" />
-        <option value="$PROJECT_DIR$/public_html/assets/css/style.scss" />
+        <option value="$PROJECT_DIR$/public_html/assets/incl/init.php" />
         <option value="$PROJECT_DIR$/public_html/admin/song.php" />
+        <option value="$PROJECT_DIR$/core/classes/Artist.php" />
+        <option value="$PROJECT_DIR$/public_html/admin/artist.php" />
+        <option value="$PROJECT_DIR$/public_html/assets/css/style.scss" />
       </list>
     </option>
   </component>
@@ -172,8 +302,8 @@
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1440" />
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+    <option name="width" value="714" />
     <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -182,6 +312,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -193,6 +324,12 @@
               <item name="Songbook" type="b2602c69:ProjectViewProjectNode" />
               <item name="Songbook" type="462c0819:PsiDirectoryNode" />
               <item name="core" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Songbook" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Songbook" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Songbook" type="b2602c69:ProjectViewProjectNode" />
@@ -223,21 +360,27 @@
               <item name="Songbook" type="462c0819:PsiDirectoryNode" />
               <item name="public_html" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-              <item name="style.scss" type="620a8d5e:NestingTreeNode" />
+              <item name="incl" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Songbook" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Songbook" type="462c0819:PsiDirectoryNode" />
-              <item name="public_html" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="incl" type="462c0819:PsiDirectoryNode" />
+              <item name="games" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Songbook" type="b2602c69:ProjectViewProjectNode" />
+              <item name="games" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Songbook" type="b2602c69:ProjectViewProjectNode" />
+              <item name="games" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="sass" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -251,11 +394,13 @@
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public_html/admin" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public_html/admin" />
       <recent name="$PROJECT_DIR$/public_html" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/core/classes" />
+      <recent name="$PROJECT_DIR$/public_html/admin" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -286,23 +431,46 @@
       <workItem from="1544513001234" duration="15961000" />
       <workItem from="1544535486871" duration="1296000" />
       <workItem from="1544537052926" duration="6394000" />
-      <workItem from="1544640374623" duration="2566000" />
+      <workItem from="1544640374623" duration="2666000" />
+      <workItem from="1544695208100" duration="7415000" />
     </task>
+    <task id="LOCAL-00001" summary="Update">
+      <created>1544695328414</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1544695328414</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Opdateret med fuld EDIT (CREATE/UPDATE) funktion">
+      <created>1544704703281</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1544704703281</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Update: Nu med slette funktion">
+      <created>1544708405710</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1544708405710</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33490000" />
+    <option name="totallyTimeSpent" value="41005000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.035541195" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29542202" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32909605" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32768363" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32650602" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -324,6 +492,12 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Update" />
+    <MESSAGE value="Opdateret med fuld EDIT (CREATE/UPDATE) funktion" />
+    <MESSAGE value="Update: Nu med slette funktion" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update: Nu med slette funktion" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../snippets/public_html/archive/php/pdo/songbook.php">
@@ -377,13 +551,6 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/public_html/create.php" />
-    <entry file="file://$PROJECT_DIR$/core/Song.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Downloads/adminsite/public_html/cms/admin/user.php" />
     <entry file="file://$PROJECT_DIR$/../games/src/sass/_puzzle.scss">
       <provider selected="true" editor-type-id="text-editor">
@@ -399,33 +566,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public_html/assets/incl/init.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="30" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Adminsite/core/classes/formpresenter.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public_html/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" selection-start-line="5" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="23" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public_html/assets/incl/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
+        <state relative-caret-position="210">
           <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
         </state>
       </provider>
@@ -437,22 +580,63 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public_html/assets/css/style.scss">
+    <entry file="file://$PROJECT_DIR$/core/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+        <state relative-caret-position="345">
+          <caret line="23" column="23" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" selection-start-line="5" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/assets/incl/init.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../games/src/sass/master.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-59" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Adminsite/core/classes/formpresenter.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/public_html/admin/song.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="130" column="25" selection-start-line="130" selection-start-column="25" selection-end-line="130" selection-end-column="25" />
+        <state relative-caret-position="-10">
+          <caret line="38" column="34" selection-start-line="38" selection-start-column="34" selection-end-line="38" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/classes/Artist.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
           <folding>
-            <element signature="e#217#1775#0#PHP" />
-            <element signature="e#1751#2985#0#PHP" />
-            <element signature="e#2713#2756#0#PHP" />
+            <element signature="e#6#87#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/admin/artist.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="608">
+          <caret line="71" column="24" selection-start-line="71" selection-start-column="24" selection-end-line="71" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/assets/css/style.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="45" column="15" selection-start-line="45" selection-start-column="15" selection-end-line="45" selection-end-column="15" />
         </state>
       </provider>
     </entry>

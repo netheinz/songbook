@@ -3,7 +3,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/assets/incl/init.php";
 
 $mode = isset($_GET["mode"]) && !empty($_GET["mode"]) ? $_GET["mode"] : "list";
 
-$page_title = "Sange";
+$page_title = "Artister";
 
 switch(strtoupper($mode)) {
 	default:
@@ -17,29 +17,16 @@ switch(strtoupper($mode)) {
 
 		echo getAdminHeader($page_title, "Oversigt", $arr_buttons);
 
-		$sql = "SELECT song.id, song.title AS song, genre.title AS genre, album.title AS album, artist.name AS artist " .
-		       "FROM song " .
-		       "LEFT JOIN genre " .
-		       "ON song.genre_id = genre.id " .
-		       "LEFT JOIN song_album_rel " .
-		       "ON song.id = song_album_rel.song_id " .
-		       "LEFT JOIN album " .
-		       "ON song_album_rel.album_id = album.id " .
-		       "LEFT JOIN artist " .
-		       "ON album.artist_id = artist.id " .
-		       "ORDER BY song.title";
-		$stmt = $db->prepare($sql);
-		$stmt->execute();
-		$row = $stmt->fetchAll(PDO::FETCH_ASSOC);
+		$obj = new Artist();
+		$row = $obj->getAll();
 
-        $accHtml = "<div class='row rowheader song'>\n" .
-                   "   <div>Handling</div>\n" .
-                   "   <div>Titel</div>\n" .
-                   "   <div>Album</div>\n" .
-                   "   <div>Artist</div>\n" .
+    	$accHtml = "<div class='row rowheader artist'>\n" .
+                   "<div>Handling</div>\n" .
+                   "<div>Navn</div>\n" .
                    "</div>\n";
 
-		$accHtml .= "<div class='row song'>";
+		$accHtml .= "<div class='row artist'>";
+
 		foreach($row as $rowData) {
 			$accHtml .= "<div>" .
 							"<a href=\"?mode=edit&id=".$rowData["id"]."\">" .
@@ -49,9 +36,7 @@ switch(strtoupper($mode)) {
 							"<a href=\"?mode=delete&id=".$rowData["id"]."\">" .
                                 "<i class=\"fas fa-trash-alt\" title=\"Slet\"></i></a>\n" .
 						"</div>";
-			$accHtml .= "<div>" . $rowData["song"] . "</div>\n";
-			$accHtml .= "<div>" . $rowData["album"] . "</div>\n";
-			$accHtml .= "<div>" . $rowData["artist"] . "</div>\n";
+			$accHtml .= "<div>" . $rowData["name"] . "</div>\n";
 
 		}
 		$accHtml .= "</div>";
@@ -62,40 +47,34 @@ switch(strtoupper($mode)) {
 		break;
 
     case "DETAILS":
-        echo $id = isset($_GET["id"]) && !empty($_GET["id"]) ? (int)$_GET["id"] : 0;
+        $id = isset($_GET["id"]) && !empty($_GET["id"]) ? (int)$_GET["id"] : 0;
 
 	    $arr_buttons = [
 		    getButton("Oversigt", "?mode=list"),
 		    getButton("Opret ny", "?mode=create")
 	    ];
 
+	    $obj = new Artist();
+	    $row = $obj->get($id);
+
+
 	    sysHeader();
 
 	    echo getAdminHeader($page_title, "Se detaljer", $arr_buttons);
 
-	    $sql = "SELECT song.id, song.title AS song, genre.title AS genre, album.title AS album, artist.name AS artist " .
-	           "FROM song " .
-	           "LEFT JOIN genre " .
-	           "ON song.genre_id = genre.id " .
-	           "LEFT JOIN song_album_rel " .
-	           "ON song.id = song_album_rel.song_id " .
-	           "LEFT JOIN album " .
-	           "ON song_album_rel.album_id = album.id " .
-	           "LEFT JOIN artist " .
-	           "ON album.artist_id = artist.id " .
-	           "WHERE song.id = :id";
+	    $accHtml = "<div class='row rowheader details'>\n" .
+	               "<div>Felt</div>\n" .
+	               "<div>Værdi</div>\n" .
+	               "</div>\n";
 
-        $stmt = $db->prepare( $sql );
-        $stmt->bindParam( ":id", $id );
-        $stmt->execute();
-        $row = $stmt->fetch( PDO::FETCH_ASSOC);
 
         if($row) {
-	        $accHtml = "";
-
+	        $accHtml .= "<div class=\"row details\">";
 	        foreach ( $row as $key => $value ) {
-		        $accHtml .= "<li>" . $key . " - " . $value . "</li>\n";
+		        $accHtml .= "<div>" . $key . "</div>\n";
+		        $accHtml .= "<div>" . $value . "</div>\n";
 	        }
+	        $accHtml .= "</div>\n";
 	        echo $accHtml;
         }
 	    sysFooter();
@@ -138,7 +117,7 @@ switch(strtoupper($mode)) {
 
 		//Sætter button panel
 		$arr_buttons = [
-			getButton("Oversigt", "song.php"),
+			getButton("Oversigt", "artist.php"),
 		];
 
 		echo getAdminHeader($page_title, "Opret ny sang", $arr_buttons);
