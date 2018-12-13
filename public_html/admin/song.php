@@ -19,13 +19,13 @@ switch(strtoupper($mode)) {
 
 		$sql = "SELECT song.id, song.title AS song, genre.title AS genre, album.title AS album, artist.name AS artist " .
 		       "FROM song " .
-		       "JOIN genre " .
+		       "LEFT JOIN genre " .
 		       "ON song.genre_id = genre.id " .
-		       "JOIN song_album_rel " .
+		       "LEFT JOIN song_album_rel " .
 		       "ON song.id = song_album_rel.song_id " .
-		       "JOIN album " .
+		       "LEFT JOIN album " .
 		       "ON song_album_rel.album_id = album.id " .
-		       "JOIN artist " .
+		       "LEFT JOIN artist " .
 		       "ON album.artist_id = artist.id " .
 		       "ORDER BY song.title";
 		$stmt = $db->prepare($sql);
@@ -55,7 +55,6 @@ switch(strtoupper($mode)) {
 		break;
 
     case "DETAILS":
-        var_dump($_GET);
         echo $id = isset($_GET["id"]) && !empty($_GET["id"]) ? (int)$_GET["id"] : 0;
 
 	    $arr_buttons = [
@@ -69,13 +68,13 @@ switch(strtoupper($mode)) {
 
 	    $sql = "SELECT song.id, song.title AS song, genre.title AS genre, album.title AS album, artist.name AS artist " .
 	           "FROM song " .
-	           "JOIN genre " .
+	           "LEFT JOIN genre " .
 	           "ON song.genre_id = genre.id " .
-	           "JOIN song_album_rel " .
+	           "LEFT JOIN song_album_rel " .
 	           "ON song.id = song_album_rel.song_id " .
-	           "JOIN album " .
+	           "LEFT JOIN album " .
 	           "ON song_album_rel.album_id = album.id " .
-	           "JOIN artist " .
+	           "LEFT JOIN artist " .
 	           "ON album.artist_id = artist.id " .
 	           "WHERE song.id = :id";
 
@@ -96,11 +95,42 @@ switch(strtoupper($mode)) {
         break;
 
 	case "EDIT":
+	    //Henter ID fra GET - UPDATE hvis id er større end 0 ellers CREATE
 		$id = isset($_GET["id"]) && !empty($_GET["id"]) ? (int)$_GET["id"] : 0;
 
+		//Sætter button panel
 		$arr_buttons = [
 			getButton("Oversigt", "song.php"),
 		];
+
+		//Definerer sidetitel ud fra create/update
+		$mode_title = ($id > 0) ? "Rediger" : "Opret ny sang";
+
+		//Deklarerer variabler til felt værdier
+		$title = "";
+		$content = "";
+		$genre_id = 0;
+
+		//Henter eksisterende data i tilfælde af en update
+		if($id > 0) {
+		    $sql = "SELECT * FROM song " .
+                   "WHERE id = :id";
+		    $stmt = $db->prepare($sql);
+		    $stmt->bindParam(":id", $id);
+		    $stmt->execute();
+		    $row = $stmt->fetch(PDO::FETCH_ASSOC);
+		    $title = $row["title"];
+		    $content = $row["content"];
+		    $genre_id = $row["genre_id"];
+
+        }
+
+        //Henter data fra genre tabel - bruges til selectbox
+        $sql = "SELECT * FROM genre";
+		$stmt = $db->prepare($sql);
+		$stmt->execute();
+		$row_genre = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
 
 		sysHeader();
 
@@ -108,14 +138,28 @@ switch(strtoupper($mode)) {
 
 		?>
         <form method="post" action="?mode=save">
+            <input type="hidden" name="id" value="<?php echo $id ?>">
             <fieldset>
                 <div>
                     <label for="title">Titel:</label>
-                    <input name="title" id="title" placeholder="Indtast titel">
+                    <input name="title" id="title" placeholder="Indtast titel" value="<?php echo $title ?>">
                 </div>
                 <div>
                     <label for="content">Tekst:</label>
-                    <textarea name="content" id="content" placeholder="Indtast titel"></textarea>
+                    <textarea name="content" id="content" placeholder="Indtast titel"><?php echo $content ?></textarea>
+                </div>
+                <div>
+                    <label for="genre">Genre:</label>
+                    <select name="genre_id">
+                        <?php
+                            //Loop row_genre og lav options til select box
+                            foreach ($row_genre as $key => $data) {
+                                //Marker valgte hvis der er en
+                                $selected = ($data["id"] === $id) ? "selected" : "";
+                                echo "<option value=\"".$data["id"]."\" ".$selected.">" . $data["title"] . "</option>";
+                            }
+                        ?>
+                    </select>
                 </div>
                 <button type="submit">Send</button>
                 <button type="reset">Nulstil </button>
@@ -127,7 +171,42 @@ switch(strtoupper($mode)) {
 		break;
 
     case "SAVE":
-        echo "Hej hej";
-        var_dump($_POST);
-        break;
+	    //Henter ID fra POST - UPDATE hvis id er større end 0 ellers CREATE
+	    $id = isset($_POST["id"]) && !empty($_POST["id"]) ? (int)$_POST["id"] : 0;
+
+	    //Henter vars fra POST
+        $title = $_POST["title"];
+        $content = $_POST["content"];
+        $genre_id = $_POST["genre_id"];
+
+	    if($id > 0) {
+		    //Updater hvis id er større end 0
+            $sql = "UPDATE song SET " .
+                    "title = :title, " .
+                    "content = :content, " .
+                    "genre_id = :genre_id " .
+                    "WHERE id = :id";
+            $stmt = $db->prepare($sql);
+            $stmt->bindParam(":title", $title);
+            $stmt->bindParam(":content", $content);
+            $stmt->bindParam(":genre_id", $genre_id);
+            $stmt->bindParam(":id", $id);
+            $stmt->execute();
+
+        } else {
+            //Indsætter record hvis id er lig 0
+            $sql = "INSERT INTO song(title, content, genre_id) VALUES(:title, :content, :genre_id)";
+            $stmt = $db->prepare($sql);
+            $stmt->bindParam(":title", $title);
+            $stmt->bindParam(":content", $content);
+            $stmt->bindParam(":genre_id", $genre_id);
+            $stmt->execute();
+            $id = $db->lastInsertId();
+
+        }
+
+        //Viderestiller til detalje mode
+        header("Location: ?mode=details&id=" . $id);
+
+	    break;
 }
