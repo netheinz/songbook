@@ -1,0 +1,47 @@
+* {
+  font-family: "Trebuchet MS"; }
+
+header {
+  border-bottom: black solid 1px; }
+
+main {
+  width: 100%;
+  max-width: 1000px; }
+
+h2 {
+  margin-bottom: 5px; }
+
+.adminpanel {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between; }
+
+.adminpanel div:last-child {
+  padding-top: 20px; }
+
+button {
+  padding: 5px 10px; }
+
+fieldset div {
+  display: grid;
+  grid-template-columns: 10% 90%;
+  padding: 10px 0px;
+  grid-gap: 15px; }
+
+input, textarea {
+  font-size: 0.9rem; }
+
+.row {
+  display: grid;
+  grid-template-columns: 5% 35% 30% 30%; }
+  .row div {
+    border-top: solid 1px #000; }
+    .row div a {
+      color: #000; }
+      .row div a:hover {
+        color: #000; }
+      .row div a i {
+        font-size: 0.8rem; }
+
+/*# sourceMappingURL=style.css.map */
