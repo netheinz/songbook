@@ -84,26 +84,17 @@ switch(strtoupper($mode)) {
 	    //Henter ID fra GET - UPDATE hvis id er større end 0 ellers CREATE
 		$id = isset($_GET["id"]) && !empty($_GET["id"]) ? (int)$_GET["id"] : 0;
 
-		//Definerer sidetitel ud fra create/update
-		$mode_title = ($id > 0) ? "Rediger" : "Opret ny sang";
-
 		//Deklarerer variabler til felt værdier
-		$title = "";
-		$content = "";
-		$genre_id = 0;
+		$name = "";
+		$info = "";
 
 		//Henter eksisterende data i tilfælde af en update
 		if($id > 0) {
-		    $sql = "SELECT * FROM song " .
-                   "WHERE id = :id";
-		    $stmt = $db->prepare($sql);
-		    $stmt->bindParam(":id", $id);
-		    $stmt->execute();
-		    $row = $stmt->fetch(PDO::FETCH_ASSOC);
-		    $title = $row["title"];
-		    $content = $row["content"];
-		    $genre_id = $row["genre_id"];
+			$obj = new Artist();
+			$obj->get($id);
 
+		    $name = $obj->name;
+		    $info = $obj->info;
         }
 
         //Henter data fra genre tabel - bruges til selectbox
@@ -112,27 +103,29 @@ switch(strtoupper($mode)) {
 		$stmt->execute();
 		$row_genre = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-
 		sysHeader();
+
+		//Definerer sidetitel ud fra create/update
+		$mode_title = ($id > 0) ? "Rediger" : "Opret ny artist";		
 
 		//Sætter button panel
 		$arr_buttons = [
 			getButton("Oversigt", "artist.php"),
 		];
 
-		echo getAdminHeader($page_title, "Opret ny sang", $arr_buttons);
+		echo getAdminHeader($page_title, $mode_title, $arr_buttons);
 
 		?>
         <form method="post" action="?mode=save">
-            <input type="hidden" name="id" value="<?php echo $id ?>">
             <fieldset>
+	            <input type="hidden" name="id" value="<?php echo $id ?>">
                 <div>
                     <label for="title">Titel:</label>
-                    <input name="title" id="title" placeholder="Indtast titel" value="<?php echo $title ?>">
+                    <input name="name" id="name" placeholder="Indtast navn" value="<?php echo $name ?>">
                 </div>
                 <div>
                     <label for="content">Tekst:</label>
-                    <textarea name="content" id="content" placeholder="Indtast titel"><?php echo $content ?></textarea>
+					<textarea name="content" id="content" placeholder="Indtast titel"><?php echo $info ?></textarea>
                 </div>
                 <div>
                     <label for="genre">Genre:</label>

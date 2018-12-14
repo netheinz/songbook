@@ -45,7 +45,11 @@ class Artist {
 		$stmt = $this->db->prepare($sql);
 		$stmt->bindParam(":id", $id);
 		$stmt->execute();
-		return $stmt->fetch(PDO::FETCH_ASSOC);
+		$row = $stmt->fetch(PDO::FETCH_ASSOC);
+		
+		$this->name = $row["name"];
+		$this->info = $row["info"];
+
 	}
 
 }
