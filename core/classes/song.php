@@ -6,17 +6,20 @@
  * 18. Dec 2018
  */
 class song {
+	/**
+	 * Song Properties
+	 */
 	public $id;
 	public $title;
 	public $content;
 	public $genre;
 	public $artist;
 	public $albums = [];
-
 	private $db;
 
 	/**
-	 * song constructor.
+	 * Song Constructor
+	 * Globaliserer db objekt og sætter det som class member
 	 */
 	public function __construct() {
 		global $db;
@@ -24,6 +27,7 @@ class song {
 	}
 
 	/**
+	 * Returnerer array med alle sange joined med artist, genre og album
 	 * @return array
 	 */
 	public function getAll() {
@@ -45,6 +49,7 @@ class song {
 	}
 
 	/**
+	 * Henter en enkel sang ud fra id og tildeler værdier til class properties
 	 * @param $id
 	 */
 	public function get($id) {
@@ -68,6 +73,7 @@ class song {
 	}
 
 	/**
+	 * Henter array med alle de albums som en sang er repræsenteret på
 	 * @param $id
 	 *
 	 * @return array
@@ -86,6 +92,7 @@ class song {
 	}
 
 	/**
+	 * Henter artistens navn ud fra en sangs id
 	 * @param $id
 	 *
 	 * @return mixed
