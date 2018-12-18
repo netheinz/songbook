@@ -10,6 +10,11 @@
 
 <header>
     <h1>PHP/MySQL Sangbog</h1>
+
+    <nav>
+        <a href="song.php">Sange</a>
+        <a href="artist.php">Artister</a>
+    </nav>
 </header>
 
 <main>

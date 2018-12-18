@@ -17,20 +17,8 @@ switch(strtoupper($mode)) {
 
 		echo getAdminHeader($page_title, "Oversigt", $arr_buttons);
 
-		$sql = "SELECT song.id, song.title AS song, genre.title AS genre, album.title AS album, artist.name AS artist " .
-		       "FROM song " .
-		       "LEFT JOIN genre " .
-		       "ON song.genre_id = genre.id " .
-		       "LEFT JOIN song_album_rel " .
-		       "ON song.id = song_album_rel.song_id " .
-		       "LEFT JOIN album " .
-		       "ON song_album_rel.album_id = album.id " .
-		       "LEFT JOIN artist " .
-		       "ON album.artist_id = artist.id " .
-		       "ORDER BY song.title";
-		$stmt = $db->prepare($sql);
-		$stmt->execute();
-		$row = $stmt->fetchAll(PDO::FETCH_ASSOC);
+		$song = new song();
+		$row = $song->getAll();
 
         $accHtml = "<div class='row rowheader song'>\n" .
                    "   <div>Handling</div>\n" .
@@ -62,7 +50,7 @@ switch(strtoupper($mode)) {
 		break;
 
     case "DETAILS":
-        echo $id = isset($_GET["id"]) && !empty($_GET["id"]) ? (int)$_GET["id"] : 0;
+        $id = isset($_GET["id"]) && !empty($_GET["id"]) ? (int)$_GET["id"] : 0;
 
 	    $arr_buttons = [
 		    getButton("Oversigt", "?mode=list"),
@@ -90,12 +78,19 @@ switch(strtoupper($mode)) {
         $stmt->execute();
         $row = $stmt->fetch( PDO::FETCH_ASSOC);
 
-        if($row) {
-	        $accHtml = "";
+	    $accHtml = "<div class='row rowheader details'>\n" .
+	               "<div>Felt</div>\n" .
+	               "<div>Værdi</div>\n" .
+	               "</div>\n";
 
+
+        if($row) {
+	        $accHtml .= "<div class=\"row details\">";
 	        foreach ( $row as $key => $value ) {
-		        $accHtml .= "<li>" . $key . " - " . $value . "</li>\n";
+		        $accHtml .= "<div>" . $key . "</div>\n";
+		        $accHtml .= "<div>" . $value . "</div>\n";
 	        }
+	        $accHtml .= "</div>\n";
 	        echo $accHtml;
         }
 	    sysFooter();
@@ -120,7 +115,8 @@ switch(strtoupper($mode)) {
 		    $stmt = $db->prepare($sql);
 		    $stmt->bindParam(":id", $id);
 		    $stmt->execute();
-		    $row = $stmt->fetch(PDO::FETCH_ASSOC);
+			$row = $stmt->fetch(PDO::FETCH_ASSOC);
+			
 		    $title = $row["title"];
 		    $content = $row["content"];
 		    $genre_id = $row["genre_id"];
@@ -160,9 +156,10 @@ switch(strtoupper($mode)) {
                     <select name="genre_id">
                         <?php
                             //Loop row_genre og lav options til select box
-                            foreach ($row_genre as $key => $data) {
+                            foreach ($row_genre as $data) {
+								var_dump($key);
                                 //Marker valgte hvis der er en
-                                $selected = ($data["id"] === $id) ? "selected" : "";
+                                $selected = ($data["id"] === $genre_id) ? "selected" : "";
                                 echo "<option value=\"".$data["id"]."\" ".$selected.">" . $data["title"] . "</option>";
                             }
                         ?>
@@ -180,11 +177,11 @@ switch(strtoupper($mode)) {
     case "SAVE":
 	    //Henter ID fra POST - UPDATE hvis id er større end 0 ellers CREATE
 	    $id = isset($_POST["id"]) && !empty($_POST["id"]) ? (int)$_POST["id"] : 0;
-
+	
 	    //Henter vars fra POST
-        $title = $_POST["title"];
-        $content = $_POST["content"];
-        $genre_id = $_POST["genre_id"];
+        $title = mysql_real_escape_string($_POST["title"]);
+        $content = mysql_real_escape_string($_POST["content"]);
+        $genre_id = (int)$_POST["genre_id"];
 
 	    if($id > 0) {
 		    //Updater hvis id er større end 0

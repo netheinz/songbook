@@ -2,6 +2,11 @@
   <dictionary name="heinz">
     <words>
       <w>adminpanel</w>
+      <w>coreroot</w>
+      <w>dbname</w>
+      <w>docroot</w>
+      <w>heka</w>
+      <w>passwd</w>
     </words>
   </dictionary>
 </component>

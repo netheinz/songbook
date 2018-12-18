@@ -6,7 +6,7 @@
  * Time: 19.25
  */
 
-class Artist {
+class artist {
 	public $id;
 	public $name;
 	public $info;
@@ -39,9 +39,7 @@ class Artist {
 	 */
 	public function get($id) {
 		$this->id = $id;
-		$sql = "SELECT * " .
-		       "FROM artist " .
-		       "WHERE id = :id";
+		$sql = "SELECT * FROM artist WHERE id = :id";
 		$stmt = $this->db->prepare($sql);
 		$stmt->bindParam(":id", $id);
 		$stmt->execute();
@@ -49,7 +47,32 @@ class Artist {
 		
 		$this->name = $row["name"];
 		$this->info = $row["info"];
-
 	}
 
+	public function	save() {
+		if($this->id > 0) {
+			$this->update();
+		} else {
+			$this->create();
+		}
+	}
+
+    public function create() {
+		$sql = "INSERT INTO artist(name, info) VALUES(:name, :info)";
+		$stmt = $db->prepare();
+		$stmt->bindParam(":name", $this->name);
+		$stmt->bindParam(":info", $this->info);
+		$stmt->execute();		
+		return $db->lastInsertId();
+	}	
+	
+	public function update() {
+		$sql = "UPDATE artist SET name = :name, info = :info WHERE id = :id";
+		$stmt = $db->prepare();
+		$stmt->bindParam(":name", $this->name);
+		$stmt->bindParam(":info", $this->info);
+		$stmt->bindParam(":id", $this->id);
+		$stmt->execute();
+		return $this->id;	
+	}
 }
