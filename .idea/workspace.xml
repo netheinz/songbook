@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1b5e7e6e-04ed-4407-90f7-3b54c26d47e0" name="Default Changelist" comment="Update">
       <change afterPath="$PROJECT_DIR$/../Adminsite/public_html/.htaccess" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/classes/listpresenter.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/assets/js/functions.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/arrays/assets/js/arrays.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/arrays/fetch-example/data.json" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/arrays/fetch-example/fetch-example.js" afterDir="false" />
@@ -46,17 +44,8 @@
       <change beforePath="$PROJECT_DIR$/../Adminsite/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Adminsite/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Adminsite/core/classes/person.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Adminsite/core/classes/person.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Adminsite/public_html/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Adminsite/public_html/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/classes/song.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/classes/song.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public_html/admin/artist.php" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/admin/artist.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/classes/listpresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/classes/listpresenter.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public_html/admin/song.php" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/admin/song.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public_html/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public_html/assets/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/css/style.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public_html/assets/css/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/css/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public_html/assets/incl/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/incl/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public_html/assets/incl/init.php" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/incl/init.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public_html/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public_html/search.php" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/search.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../snippets/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../snippets/.idea/deployment.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../snippets/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../snippets/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../snippets/.idea/snippets.iml" beforeDir="false" />
@@ -147,7 +136,7 @@
           <entry key="CSS" value="5" />
           <entry key="HTML" value="2" />
           <entry key="JavaScript" value="1" />
-          <entry key="PHP" value="59" />
+          <entry key="PHP" value="60" />
           <entry key="SCSS" value="9" />
           <entry key="SQL" value="2" />
         </counts>
@@ -160,8 +149,8 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="1" />
-          <entry key="PHP" value="10903" />
-          <entry key="PLAIN_TEXT" value="525" />
+          <entry key="PHP" value="11675" />
+          <entry key="PLAIN_TEXT" value="614" />
           <entry key="SCSS" value="1052" />
         </counts>
       </usages-collector>
@@ -177,26 +166,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/classes/song.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="511">
-              <caret line="116" selection-start-line="116" selection-end-line="116" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/data/songbook19-12-2018122018.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="688">
-              <caret line="75" column="39" selection-start-line="75" selection-start-column="39" selection-end-line="75" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public_html/admin/song.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="579">
-              <caret line="200" selection-start-line="200" selection-end-line="200" />
+            <state relative-caret-position="480">
+              <caret line="32" column="29" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -204,29 +175,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/classes/artist.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="588">
-              <caret line="70" selection-start-line="70" selection-end-line="70" />
-              <folding>
-                <element signature="e#6#87#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="990">
+              <caret line="66" column="51" lean-forward="true" selection-start-line="66" selection-start-column="51" selection-end-line="66" selection-end-column="51" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public_html/admin/artist.php">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public_html/admin/song.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="5" selection-start-column="5" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Adminsite/public_html/cms/admin/orgs.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="362">
-              <caret line="28" column="34" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
+            <state relative-caret-position="504">
+              <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -234,26 +193,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/classes/listpresenter.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="56" selection-start-line="21" selection-start-column="56" selection-end-line="21" selection-end-column="56" />
+            <state relative-caret-position="504">
+              <caret line="35" column="65" selection-start-line="35" selection-start-column="65" selection-end-line="35" selection-end-column="65" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/classes/toolbox.php">
+        <entry file="file://$PROJECT_DIR$/../Adminsite/core/classes/htmltool.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1080">
-              <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+            <state relative-caret-position="345">
+              <caret line="28" selection-start-line="28" selection-end-line="37" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public_html/assets/incl/footer.php">
+        <entry file="file://$PROJECT_DIR$/public_html/admin/artist.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="47" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="47" />
+            <state relative-caret-position="420">
+              <caret line="28" column="42" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../Adminsite/public_html/cms/admin/orgs.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="515">
+              <caret line="44" column="9" lean-forward="true" selection-start-line="37" selection-start-column="8" selection-end-line="44" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -302,16 +270,17 @@
         <option value="$PROJECT_DIR$/core/autoload.php" />
         <option value="$PROJECT_DIR$/core/classes/tool.php" />
         <option value="$PROJECT_DIR$/core/functions.php" />
-        <option value="$PROJECT_DIR$/core/classes/toolbox.php" />
         <option value="$PROJECT_DIR$/public_html/assets/incl/init.php" />
         <option value="$PROJECT_DIR$/public_html/assets/css/style.scss" />
-        <option value="$PROJECT_DIR$/core/classes/listpresenter.php" />
         <option value="$PROJECT_DIR$/public_html/assets/js/functions.js" />
         <option value="$PROJECT_DIR$/public_html/assets/incl/footer.php" />
-        <option value="$PROJECT_DIR$/core/classes/song.php" />
         <option value="$PROJECT_DIR$/public_html/admin/artist.php" />
-        <option value="$PROJECT_DIR$/public_html/admin/song.php" />
         <option value="$PROJECT_DIR$/data/songbook19-12-2018122018.sql" />
+        <option value="$PROJECT_DIR$/core/classes/artist.php" />
+        <option value="$PROJECT_DIR$/core/classes/toolbox.php" />
+        <option value="$PROJECT_DIR$/core/classes/song.php" />
+        <option value="$PROJECT_DIR$/core/classes/listpresenter.php" />
+        <option value="$PROJECT_DIR$/public_html/admin/song.php" />
       </list>
     </option>
   </component>
@@ -329,7 +298,7 @@
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds">
     <option name="x" value="18" />
     <option name="y" value="38" />
     <option name="width" value="1408" />
@@ -352,7 +321,13 @@
             <path>
               <item name="Songbook" type="b2602c69:ProjectViewProjectNode" />
               <item name="Songbook" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Songbook" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Songbook" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Songbook" type="b2602c69:ProjectViewProjectNode" />
@@ -447,7 +422,7 @@
       <workItem from="1544695208100" duration="7601000" />
       <workItem from="1544785661630" duration="13000" />
       <workItem from="1545122645135" duration="1965000" />
-      <workItem from="1545162966603" duration="13860000" />
+      <workItem from="1545162966603" duration="16866000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <created>1544695328414</created>
@@ -519,17 +494,31 @@
       <option name="project" value="LOCAL" />
       <updated>1545203579243</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Update: Med SQL dump og cascade deleting">
+      <created>1545226583270</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1545226583270</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Update: Listpresenter &amp; delete metoder">
+      <created>1545256052272</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1545256052272</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57029000" />
+    <option name="totallyTimeSpent" value="60035000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <frame x="18" y="38" width="1408" height="804" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16595136" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28257686" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -567,7 +556,9 @@
     <MESSAGE value="Updates:&#10;- Class song med getAll, get, getSongArtist, getSongAlbums&#10;- Nu med comments&#10;- tilføjelse af class loader i core mappe" />
     <MESSAGE value="Update: Toolbox Class" />
     <MESSAGE value="Update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update" />
+    <MESSAGE value="Update: Med SQL dump og cascade deleting" />
+    <MESSAGE value="Update: Listpresenter &amp; delete metoder" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update: Listpresenter &amp; delete metoder" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../snippets/public_html/archive/php/pdo/songbook.php">
@@ -689,38 +680,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/classes/toolbox.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1080">
-          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/classes/listpresenter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="56" selection-start-line="21" selection-start-column="56" selection-end-line="21" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Adminsite/public_html/cms/admin/orgs.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="28" column="34" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public_html/admin/artist.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="5" selection-start-column="5" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public_html/assets/js/functions.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="23" lean-forward="true" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/songbook-19-12-2018.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1140">
+          <caret line="75" column="39" selection-start-line="75" selection-start-column="39" selection-end-line="75" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -731,34 +701,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/classes/artist.php">
+    <entry file="file://$PROJECT_DIR$/core/classes/toolbox.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="70" selection-start-line="70" selection-end-line="70" />
+        <state relative-caret-position="547">
+          <caret line="70" column="7" lean-forward="true" selection-start-line="70" selection-start-column="7" selection-end-line="70" selection-end-column="7" />
           <folding>
             <element signature="e#6#87#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public_html/admin/song.php">
+    <entry file="file://$PROJECT_DIR$/../Adminsite/core/classes/htmltool.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="579">
-          <caret line="200" selection-start-line="200" selection-end-line="200" />
+        <state relative-caret-position="345">
+          <caret line="28" selection-start-line="28" selection-end-line="37" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/admin/artist.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="42" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Adminsite/public_html/cms/admin/orgs.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="515">
+          <caret line="44" column="9" lean-forward="true" selection-start-line="37" selection-start-column="8" selection-end-line="44" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/classes/artist.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="990">
+          <caret line="66" column="51" lean-forward="true" selection-start-line="66" selection-start-column="51" selection-end-line="66" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/classes/listpresenter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="35" column="65" selection-start-line="35" selection-start-column="65" selection-end-line="35" selection-end-column="65" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/classes/song.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="511">
-          <caret line="116" selection-start-line="116" selection-end-line="116" />
+        <state relative-caret-position="480">
+          <caret line="32" column="29" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/songbook19-12-2018122018.sql">
+    <entry file="file://$PROJECT_DIR$/public_html/admin/song.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="688">
-          <caret line="75" column="39" selection-start-line="75" selection-start-column="39" selection-end-line="75" selection-end-column="39" />
+        <state relative-caret-position="504">
+          <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
         </state>
       </provider>
     </entry>

@@ -5,16 +5,15 @@
  * Date: 13/12/2018
  * Time: 19.25
  */
-
 class artist {
 	public $id;
 	public $name;
 	public $info;
-
 	private $db;
 
 	/**
 	 * Artist constructor.
+	 * Globaliserer db objekt og sætter det som class member
 	 */
 	public function __construct() {
 		global $db;
@@ -22,6 +21,7 @@ class artist {
 	}
 
 	/**
+	 * Returnerer array med alle artister
 	 * @return mixed multiple array
 	 */
 	public function getAll() {
@@ -33,6 +33,7 @@ class artist {
 	}
 
 	/**
+	 * Henter en artist ud fra id og tildeler værdier til class properties
 	 * @param $id
 	 *
 	 * @return mixed single array
@@ -49,30 +50,37 @@ class artist {
 		$this->info = $row["info"];
 	}
 
+	/**
+	 * @return mixed
+	 */
 	public function	save() {
 		if($this->id > 0) {
-			$this->update();
+			$sql = "UPDATE artist SET name = :name, info = :info WHERE id = :id";
+			$stmt = $db->prepare();
+			$stmt->bindParam(":name", $this->name);
+			$stmt->bindParam(":info", $this->info);
+			$stmt->bindParam(":id", $this->id);
+			$stmt->execute();
 		} else {
-			$this->create();
+			$sql = "INSERT INTO artist(name, info) VALUES(:name, :info)";
+			$stmt = $db->prepare($sql);
+			$stmt->bindParam(":name", $this->name);
+			$stmt->bindParam(":info", $this->info);
+			$stmt->execute();
+			$this->id = $db->lastInsertId();
 		}
+		return $this->id;
 	}
 
-    public function create() {
-		$sql = "INSERT INTO artist(name, info) VALUES(:name, :info)";
-		$stmt = $db->prepare();
-		$stmt->bindParam(":name", $this->name);
-		$stmt->bindParam(":info", $this->info);
-		$stmt->execute();		
-		return $db->lastInsertId();
-	}	
-	
-	public function update() {
-		$sql = "UPDATE artist SET name = :name, info = :info WHERE id = :id";
-		$stmt = $db->prepare();
-		$stmt->bindParam(":name", $this->name);
-		$stmt->bindParam(":info", $this->info);
+	/**
+	 * @param $id
+	 */
+	public function delete($id) {
+		$this->id = $id;
+		$sql = "DELETE FROM artist " .
+		       "WHERE id = :id";
+		$stmt = $this->db->prepare($sql);
 		$stmt->bindParam(":id", $this->id);
 		$stmt->execute();
-		return $this->id;	
 	}
 }

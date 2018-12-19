@@ -30,33 +30,6 @@ switch(strtoupper($mode)) {
         $p = new listPresenter($song->columns, $rows, "song");
         echo $p->presentlist();
 
-		/*
-        $output = "<div class='row rowheader song'>\n" .
-                   "   <div>Handling</div>\n" .
-                   "   <div>Titel</div>\n" .
-                   "   <div>Album</div>\n" .
-                   "   <div>Artist</div>\n" .
-                   "</div>\n";
-
-		$output .= "<div class='row song'>";
-		foreach($row as $rowData) {
-			$output .= "<div>" .
-							"<a href=\"?mode=edit&id=".$rowData["id"]."\">" .
-                                "<i class=\"fas fa-pencil-alt\" title=\"Rediger\"></i></a>\n" .
-							"<a href=\"?mode=details&id=".$rowData["id"]."\">" .
-                                "<i class=\"fas fa-eye\" title=\"Se detaljer\"></i></a>\n" .
-							"<a onclick=\"remove(".$rowData["id"].")\">" .
-                                "<i class=\"fas fa-trash-alt\" title=\"Slet\"></i></a>\n" .
-						"</div>";
-			$output .= "<div>" . $rowData["song"] . "</div>\n";
-			$output .= "<div>" . $rowData["album"] . "</div>\n";
-			$output .= "<div>" . $rowData["artist"] . "</div>\n";
-
-		}
-		$output .= "</div>";
-
-		echo $output;
-        */
 		toolbox::sysFooter();
 		break;
 
