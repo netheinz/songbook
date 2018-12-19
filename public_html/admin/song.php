@@ -18,8 +18,19 @@ switch(strtoupper($mode)) {
 		echo toolbox::getAdminHeader($page_title, "Oversigt", $arr_buttons);
 
 		$song = new song();
-		$row = $song->getAll();
+		$rows = [];
 
+        foreach($song->getAll() as $values) {
+            $values["options"] = toolbox::getIcon("?mode=edit&id=" . $values["id"], "edit", ["id" => 3]) .
+                                 toolbox::getIcon("?mode=details&id=" . $values["id"], "eye") .
+                                 toolbox::getIcon("?mode=delete&id=" . $values["id"], "trash-alt");
+            $rows[] = $values;
+        }
+
+        $p = new listPresenter($song->columns, $rows, "song");
+        echo $p->presentlist();
+
+		/*
         $output = "<div class='row rowheader song'>\n" .
                    "   <div>Handling</div>\n" .
                    "   <div>Titel</div>\n" .
@@ -45,7 +56,7 @@ switch(strtoupper($mode)) {
 		$output .= "</div>";
 
 		echo $output;
-
+        */
 		toolbox::sysFooter();
 		break;
 

@@ -62,4 +62,15 @@ class toolbox {
 		       $buttontext . "</button>\n";
 		return $txt;
 	}
+
+	/**
+	 * @param $link
+	 * @param $icon
+	 * @param array $attr
+	 * @return string
+	 */
+	static function getIcon($ref, $icon, $attr = array()) {
+		$class = isset($attr["class"]) ? $attr["class"] : "icon";
+		return "<a class=\"".$class."\" href=\"".$ref."\"><i class=\"fas fa-".$icon."\"></i></a>\n";
+	}
 }

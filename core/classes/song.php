@@ -1,8 +1,9 @@
 <?php
 /**
- * Class song
- * Created By Heinz K
- * 18. Dec 2018
+ * Created by PhpStorm.
+ * User: heinz
+ * Date: 18/12/2018
+ * Time: 13.25
  */
 class song {
 	/**
@@ -14,6 +15,7 @@ class song {
 	public $genre;
 	public $artist;
 	public $albums = [];
+	public $columns;
 	private $db;
 
 	/**
@@ -23,6 +25,13 @@ class song {
 	public function __construct() {
 		global $db;
 		$this->db = $db;
+
+		$this->columns = [
+			"options" => "Handling",
+			"title" => "Titel",
+			"artist" => "Artist",
+			"album" => "Album"
+		];
 	}
 
 	/**
@@ -30,7 +39,7 @@ class song {
 	 * @return array
 	 */
 	public function getAll() {
-		$sql = "SELECT song.id, song.title AS song, genre.title " .
+		$sql = "SELECT song.id, song.title AS title, genre.title " .
 		       "AS genre, album.title AS album, artist.name AS artist " .
 		       "FROM song " .
 		       "LEFT JOIN genre " .
@@ -72,7 +81,7 @@ class song {
 	}
 
 	/**
-	 * Henter array med alle de albums som en sang er repræsenteret på
+	 * Henter array med alle de albums som en sang er på
 	 * @param $id
 	 *
 	 * @return array
@@ -111,14 +120,16 @@ class song {
 		return $stmt->fetchColumn();
 	}
 
+	/**
+	 * Sletter sang
+	 * Relation slettes i databasen via constraint ON DELETE CASCADE
+	 * @param $id
+	 */
 	public function delete($id) {
 		$this->id = $id;
 
-		$sql = "DELETE song, song_album_rel " .
-	            "FROM song " .
-	            "LEFT JOIN song_album_rel " .
-	            "ON song.id = song_album_rel.song_id " .
-	            "WHERE song.id = :id";
+		$sql = "DELETE FROM song " .
+		       "WHERE id = :id";
 		$stmt = $this->db->prepare($sql);
 		$stmt->bindParam(":id", $id);
 		$stmt->execute();
