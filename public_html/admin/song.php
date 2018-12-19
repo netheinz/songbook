@@ -10,12 +10,12 @@ switch(strtoupper($mode)) {
 	case "LIST":
 
 		$arr_buttons = [
-			getButton("Opret ny", "?mode=edit"),
+			toolbox::getButton("Opret ny", "?mode=edit"),
 		];
 
-		sysHeader();
+		toolbox::sysHeader();
 
-		echo getAdminHeader($page_title, "Oversigt", $arr_buttons);
+		echo toolbox::getAdminHeader($page_title, "Oversigt", $arr_buttons);
 
 		$song = new song();
 		$row = $song->getAll();
@@ -46,20 +46,20 @@ switch(strtoupper($mode)) {
 
 		echo $accHtml;
 
-		sysFooter();
+		toolbox::sysFooter();
 		break;
 
     case "DETAILS":
         $id = isset($_GET["id"]) && !empty($_GET["id"]) ? (int)$_GET["id"] : 0;
 
 	    $arr_buttons = [
-		    getButton("Oversigt", "?mode=list"),
-		    getButton("Opret ny", "?mode=create")
+		    toolbox::getButton("Oversigt", "?mode=list"),
+		    toolbox::getButton("Opret ny", "?mode=create")
 	    ];
 
-	    sysHeader();
+	    toolbox::sysHeader();
 
-	    echo getAdminHeader($page_title, "Se detaljer", $arr_buttons);
+	    echo toolbox::getAdminHeader($page_title, "Se detaljer", $arr_buttons);
 
 	    $sql = "SELECT song.id, song.title AS song, genre.title AS genre, album.title AS album, artist.name AS artist " .
 	           "FROM song " .
@@ -93,7 +93,7 @@ switch(strtoupper($mode)) {
 	        $accHtml .= "</div>\n";
 	        echo $accHtml;
         }
-	    sysFooter();
+	    toolbox::sysFooter();
         break;
 
 	case "EDIT":
@@ -130,14 +130,14 @@ switch(strtoupper($mode)) {
 		$row_genre = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 
-		sysHeader();
+		toolbox::sysHeader();
 
 		//Sætter button panel
 		$arr_buttons = [
-			getButton("Oversigt", "song.php"),
+			toolbox::getButton("Oversigt", "song.php"),
 		];
 
-		echo getAdminHeader($page_title, "Opret ny sang", $arr_buttons);
+		echo toolbox::getAdminHeader($page_title, "Opret ny sang", $arr_buttons);
 
 		?>
         <form method="post" action="?mode=save">
@@ -171,7 +171,7 @@ switch(strtoupper($mode)) {
         </form>
 		<?php
 
-		sysFooter();
+		toolbox::sysFooter();
 		break;
 
     case "SAVE":
@@ -227,14 +227,14 @@ switch(strtoupper($mode)) {
 		    $stmt->execute();
 		    $row = $stmt->fetch( PDO::FETCH_ASSOC );
 	    }
-	    sysHeader();
+	    toolbox::sysHeader();
 
 	    //Sætter button panel
 	    $arr_buttons = [
-		    getButton("Oversigt", "song.php"),
+		    toolbox::getButton("Oversigt", "song.php"),
 	    ];
 
-	    echo getAdminHeader($page_title, "Slet sang", $arr_buttons);
+	    echo toolbox::getAdminHeader($page_title, "Slet sang", $arr_buttons);
 
 	    ?>
         <form method="post" action="?mode=dodelete">
@@ -245,7 +245,7 @@ switch(strtoupper($mode)) {
         </form>
 	    <?php
 
-	    sysFooter();
+	    toolbox::sysFooter();
         break;
 
     case "DODELETE":

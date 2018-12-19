@@ -1,13 +1,4 @@
 <?php
-
-function sysHeader() {
-	require_once $_SERVER["DOCUMENT_ROOT"]  . "/assets/incl/header.php";
-}
-
-function sysFooter() {
-	require_once $_SERVER["DOCUMENT_ROOT"]  . "/assets/incl/footer.php";
-}
-
 /**
  * @param $title Navn på admin modul side
  * @param $subtitle Navn på side mode
