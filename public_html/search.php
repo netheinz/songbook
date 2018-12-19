@@ -26,9 +26,9 @@ try {
 	$stmt->execute();
 	$row = $stmt->fetch( PDO::FETCH_ASSOC );
 
-	$accHtml = "<p><b>" . $row["song"] . "</b></p>";
-	$accHtml .= "<p>" . $row["artist"] . " - " . $row["album"] . " - " . $row["genre"] . "</p>";
-	echo $accHtml;
+	$output = "<p><b>" . $row["song"] . "</b></p>";
+	$output .= "<p>" . $row["artist"] . " - " . $row["album"] . " - " . $row["genre"] . "</p>";
+	echo $output;
 } catch(PDOException $error) {
 	echo "Fejl i SQL: " . $error;
 }

@@ -18,14 +18,14 @@ $stmt = $db->prepare($sql);
 $stmt->execute();
 $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-$accHtml = "<ul>";
+$output = "<ul>";
 
 foreach($row as $rowData) {
-	$accHtml .= "<li><a href=\"details.php?id=".$rowData["id"]."\">" . $rowData["song"] . "</a></li>\n";
+	$output .= "<li><a href=\"details.php?id=".$rowData["id"]."\">" . $rowData["song"] . "</a></li>\n";
 }
 
-$accHtml .= "</ul>";
+$output .= "</ul>";
 
-echo $accHtml;
+echo $output;
 
 require_once $_SERVER["DOCUMENT_ROOT"] . "/assets/incl/footer.php";

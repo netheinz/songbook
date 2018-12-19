@@ -17,18 +17,19 @@ switch(strtoupper($mode)) {
 
 		echo toolbox::getAdminHeader($page_title, "Oversigt", $arr_buttons);
 
+		/* Kalder en instans af song klassen og henter alle på metoden getAll() */
 		$obj = new Artist();
 		$row = $obj->getAll();
 
-    	$accHtml = "<div class='row rowheader artist'>\n" .
+    	$output = "<div class='row rowheader artist'>\n" .
                    "<div>Handling</div>\n" .
                    "<div>Navn</div>\n" .
                    "</div>\n";
 
-		$accHtml .= "<div class='row artist'>";
+		$output .= "<div class='row artist'>";
 
 		foreach($row as $rowData) {
-			$accHtml .= "<div>" .
+			$output .= "<div>" .
 							"<a href=\"?mode=edit&id=".$rowData["id"]."\">" .
                                 "<i class=\"fas fa-pencil-alt\" title=\"Rediger\"></i></a>\n" .
 							"<a href=\"?mode=details&id=".$rowData["id"]."\">" .
@@ -36,12 +37,12 @@ switch(strtoupper($mode)) {
 							"<a href=\"?mode=delete&id=".$rowData["id"]."\">" .
                                 "<i class=\"fas fa-trash-alt\" title=\"Slet\"></i></a>\n" .
 						"</div>";
-			$accHtml .= "<div>" . $rowData["name"] . "</div>\n";
+			$output .= "<div>" . $rowData["name"] . "</div>\n";
 
 		}
-		$accHtml .= "</div>";
+		$output .= "</div>";
 
-		echo $accHtml;
+		echo $output;
 
 		toolbox::sysFooter();
 		break;
@@ -62,20 +63,20 @@ switch(strtoupper($mode)) {
 
 	    echo toolbox::getAdminHeader($page_title, "Se detaljer", $arr_buttons);
 
-	    $accHtml = "<div class='row rowheader details'>\n" .
+	    $output = "<div class='row rowheader details'>\n" .
 	               "<div>Felt</div>\n" .
 	               "<div>Værdi</div>\n" .
 	               "</div>\n";
 
 
         if($row) {
-	        $accHtml .= "<div class=\"row details\">";
+	        $output .= "<div class=\"row details\">";
 	        foreach ( $row as $key => $value ) {
-		        $accHtml .= "<div>" . $key . "</div>\n";
-		        $accHtml .= "<div>" . $value . "</div>\n";
+		        $output .= "<div>" . $key . "</div>\n";
+		        $output .= "<div>" . $value . "</div>\n";
 	        }
-	        $accHtml .= "</div>\n";
-	        echo $accHtml;
+	        $output .= "</div>\n";
+	        echo $output;
         }
 	    toolbox::sysFooter();
         break;
@@ -121,7 +122,7 @@ switch(strtoupper($mode)) {
 	            <input type="hidden" name="id" value="<?php echo $id ?>">
                 <div>
                     <label for="title">Titel:</label>
-                    <input name="name" id="name" placeholder="Indtast navn" value="<?php echo $name ?>">
+                    <input type="text" name="name" id="name" placeholder="Indtast navn" value="<?php echo $name ?>">
                 </div>
                 <div>
                     <label for="content">Tekst:</label>

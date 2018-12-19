@@ -20,31 +20,31 @@ switch(strtoupper($mode)) {
 		$song = new song();
 		$row = $song->getAll();
 
-        $accHtml = "<div class='row rowheader song'>\n" .
+        $output = "<div class='row rowheader song'>\n" .
                    "   <div>Handling</div>\n" .
                    "   <div>Titel</div>\n" .
                    "   <div>Album</div>\n" .
                    "   <div>Artist</div>\n" .
                    "</div>\n";
 
-		$accHtml .= "<div class='row song'>";
+		$output .= "<div class='row song'>";
 		foreach($row as $rowData) {
-			$accHtml .= "<div>" .
+			$output .= "<div>" .
 							"<a href=\"?mode=edit&id=".$rowData["id"]."\">" .
                                 "<i class=\"fas fa-pencil-alt\" title=\"Rediger\"></i></a>\n" .
 							"<a href=\"?mode=details&id=".$rowData["id"]."\">" .
                                 "<i class=\"fas fa-eye\" title=\"Se detaljer\"></i></a>\n" .
-							"<a href=\"?mode=delete&id=".$rowData["id"]."\">" .
+							"<a onclick=\"remove(".$rowData["id"].")\">" .
                                 "<i class=\"fas fa-trash-alt\" title=\"Slet\"></i></a>\n" .
 						"</div>";
-			$accHtml .= "<div>" . $rowData["song"] . "</div>\n";
-			$accHtml .= "<div>" . $rowData["album"] . "</div>\n";
-			$accHtml .= "<div>" . $rowData["artist"] . "</div>\n";
+			$output .= "<div>" . $rowData["song"] . "</div>\n";
+			$output .= "<div>" . $rowData["album"] . "</div>\n";
+			$output .= "<div>" . $rowData["artist"] . "</div>\n";
 
 		}
-		$accHtml .= "</div>";
+		$output .= "</div>";
 
-		echo $accHtml;
+		echo $output;
 
 		toolbox::sysFooter();
 		break;
@@ -61,38 +61,21 @@ switch(strtoupper($mode)) {
 
 	    echo toolbox::getAdminHeader($page_title, "Se detaljer", $arr_buttons);
 
-	    $sql = "SELECT song.id, song.title AS song, genre.title AS genre, album.title AS album, artist.name AS artist " .
-	           "FROM song " .
-	           "LEFT JOIN genre " .
-	           "ON song.genre_id = genre.id " .
-	           "LEFT JOIN song_album_rel " .
-	           "ON song.id = song_album_rel.song_id " .
-	           "LEFT JOIN album " .
-	           "ON song_album_rel.album_id = album.id " .
-	           "LEFT JOIN artist " .
-	           "ON album.artist_id = artist.id " .
-	           "WHERE song.id = :id";
-
-        $stmt = $db->prepare( $sql );
-        $stmt->bindParam( ":id", $id );
-        $stmt->execute();
-        $row = $stmt->fetch( PDO::FETCH_ASSOC);
-
-	    $accHtml = "<div class='row rowheader details'>\n" .
+	    $output = "<div class='row rowheader details'>\n" .
 	               "<div>Felt</div>\n" .
 	               "<div>Værdi</div>\n" .
 	               "</div>\n";
 
+	    $song = new song();
+	    $song->get($id);
 
-        if($row) {
-	        $accHtml .= "<div class=\"row details\">";
-	        foreach ( $row as $key => $value ) {
-		        $accHtml .= "<div>" . $key . "</div>\n";
-		        $accHtml .= "<div>" . $value . "</div>\n";
-	        }
-	        $accHtml .= "</div>\n";
-	        echo $accHtml;
+	    $row = get_object_vars($song);
+	    foreach($row as $value) {
+	        var_dump($value);
         }
+
+
+	    echo $output;
 	    toolbox::sysFooter();
         break;
 
@@ -215,51 +198,10 @@ switch(strtoupper($mode)) {
 	    break;
 
     case "DELETE":
-	    //Henter ID fra GET
 	    $id = isset($_GET["id"]) && !empty($_GET["id"]) ? (int)$_GET["id"] : 0;
+        $song = new song();
+        $song->delete($id);
+        header("Location: ?mode=list");
+	    break;
 
-	    //Henter sang
-	    if($id > 0) {
-		    $sql  = "SELECT * FROM song " .
-		            "WHERE id = :id";
-		    $stmt = $db->prepare( $sql );
-		    $stmt->bindParam( ":id", $id );
-		    $stmt->execute();
-		    $row = $stmt->fetch( PDO::FETCH_ASSOC );
-	    }
-	    toolbox::sysHeader();
-
-	    //Sætter button panel
-	    $arr_buttons = [
-		    toolbox::getButton("Oversigt", "song.php"),
-	    ];
-
-	    echo toolbox::getAdminHeader($page_title, "Slet sang", $arr_buttons);
-
-	    ?>
-        <form method="post" action="?mode=dodelete">
-            <input type="hidden" name="id" value="<?php echo $id ?>">
-            <p>Vil du virkelig slette sangen <i><?php echo $row["title"] ?></i></p>
-            <button type="submit">Slet</button>
-            <button type="button" onclick="document.location.href='?mode=list'">Annuller</button>
-        </form>
-	    <?php
-
-	    toolbox::sysFooter();
-        break;
-
-    case "DODELETE":
-	    //Henter ID fra GET
-	    $id = isset($_POST["id"]) && !empty($_POST["id"]) ? (int)$_POST["id"] : 0;
-
-	    if($id) {
-	        $sql = "DELETE FROM song WHERE id = :id";
-	        $stmt = $db->prepare($sql);
-	        $stmt->bindParam(":id", $id);
-	        $stmt->execute();
-	        header("Location: ?mode=list");
-        }
-
-
-        break;
 }

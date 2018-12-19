@@ -30,15 +30,37 @@ button {
   padding: 5px 10px;
 }
 
-fieldset div {
-  display: grid;
-  grid-template-columns: 10% 90%;
-  padding: 10px 0px;
-  grid-gap: 15px;
+fieldset {
+  max-width: 500px;
+  border: 0px none;
+
+  div {
+    display: grid;
+    grid-template-columns: 10% 90%;
+    padding: 10px 0px;
+    grid-gap: 15px;
+  }
+
+  label, input[type="text"], textarea {
+    padding: 5px;
+  }
+
+  input[type="text"], textarea, select {
+    border-radius: 3px;
+    border: solid 1px #ccc;
+  }
 }
 
 input, textarea {
   font-size: 0.9rem;
+}
+
+.formbtnpanel {
+  margin-top: 20px;
+
+  button {
+    width: 100px;
+  }
 }
 
 .row {
@@ -70,6 +92,8 @@ input, textarea {
 .artist, .details {
   grid-template-columns: 10% 90%;
 }
+
+
 
 
 

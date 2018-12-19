@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1b5e7e6e-04ed-4407-90f7-3b54c26d47e0" name="Default Changelist" comment="Update">
       <change afterPath="$PROJECT_DIR$/../Adminsite/public_html/.htaccess" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/classes/toolbox.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/classes/listpresenter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public_html/assets/js/functions.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/arrays/assets/js/arrays.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/arrays/fetch-example/data.json" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../snippets/public_html/archive/javascript/arrays/fetch-example/fetch-example.js" afterDir="false" />
@@ -46,10 +47,16 @@
       <change beforePath="$PROJECT_DIR$/../Adminsite/core/classes/person.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Adminsite/core/classes/person.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Adminsite/public_html/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Adminsite/public_html/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/_functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/classes/song.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/classes/song.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public_html/admin/artist.php" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/admin/artist.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public_html/admin/song.php" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/admin/song.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/css/style.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/css/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/css/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/incl/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/incl/footer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public_html/assets/incl/init.php" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/incl/init.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/search.php" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/search.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../snippets/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../snippets/.idea/deployment.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../snippets/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../snippets/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../snippets/.idea/snippets.iml" beforeDir="false" />
@@ -139,8 +146,10 @@
         <counts>
           <entry key="CSS" value="5" />
           <entry key="HTML" value="2" />
-          <entry key="PHP" value="49" />
-          <entry key="SCSS" value="8" />
+          <entry key="JavaScript" value="1" />
+          <entry key="PHP" value="59" />
+          <entry key="SCSS" value="9" />
+          <entry key="SQL" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -151,9 +160,9 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="1" />
-          <entry key="PHP" value="10000" />
-          <entry key="PLAIN_TEXT" value="510" />
-          <entry key="SCSS" value="718" />
+          <entry key="PHP" value="10903" />
+          <entry key="PLAIN_TEXT" value="525" />
+          <entry key="SCSS" value="1052" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.php.new.class">
@@ -168,44 +177,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/classes/song.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1409">
-              <caret line="94" column="47" selection-start-line="94" selection-start-column="47" selection-end-line="94" selection-end-column="47" />
+            <state relative-caret-position="511">
+              <caret line="116" selection-start-line="116" selection-end-line="116" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public_html/assets/incl/init.php">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/data/songbook19-12-2018122018.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="72" selection-start-line="2" selection-start-column="72" selection-end-line="2" selection-end-column="72" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/autoload.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="3" lean-forward="true" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/classes/toolbox.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-428">
-              <caret line="2" column="23" lean-forward="true" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public_html/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="25" selection-start-line="5" selection-start-column="7" selection-end-line="15" selection-end-column="25" />
+            <state relative-caret-position="688">
+              <caret line="75" column="39" selection-start-line="75" selection-start-column="39" selection-end-line="75" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -213,26 +195,65 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public_html/admin/song.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="422">
-              <caret line="56" column="21" selection-start-line="56" selection-start-column="21" selection-end-line="56" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public_html/admin/artist.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="517">
-              <caret line="236" column="8" selection-start-line="236" selection-start-column="8" selection-end-line="236" selection-end-column="8" />
+            <state relative-caret-position="579">
+              <caret line="200" selection-start-line="200" selection-end-line="200" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/_functions.php">
+        <entry file="file://$PROJECT_DIR$/core/classes/artist.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="34" column="1" selection-start-line="23" selection-end-line="34" selection-end-column="1" />
+            <state relative-caret-position="588">
+              <caret line="70" selection-start-line="70" selection-end-line="70" />
+              <folding>
+                <element signature="e#6#87#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public_html/admin/artist.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="5" selection-start-column="5" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../Adminsite/public_html/cms/admin/orgs.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="362">
+              <caret line="28" column="34" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/classes/listpresenter.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" column="56" selection-start-line="21" selection-start-column="56" selection-end-line="21" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/classes/toolbox.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1080">
+              <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public_html/assets/incl/footer.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="47" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -244,8 +265,21 @@
       <list>
         <option value="HTML File" />
         <option value="SCSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>arrValues</find>
+      <find>accHtml</find>
+      <find>arrColumns</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>columns</replace>
+      <replace>values</replace>
+      <replace>output</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="ROOT_SYNC" value="SYNC" />
@@ -264,17 +298,20 @@
         <option value="$PROJECT_DIR$/public_html/create.php" />
         <option value="$PROJECT_DIR$/public_html/song.php" />
         <option value="$PROJECT_DIR$/public_html/assets/incl/header.php" />
-        <option value="$PROJECT_DIR$/public_html/assets/incl/footer.php" />
         <option value="$PROJECT_DIR$/core/classes/Artist.php" />
-        <option value="$PROJECT_DIR$/public_html/assets/css/style.scss" />
-        <option value="$PROJECT_DIR$/core/classes/song.php" />
         <option value="$PROJECT_DIR$/core/autoload.php" />
         <option value="$PROJECT_DIR$/core/classes/tool.php" />
         <option value="$PROJECT_DIR$/core/functions.php" />
         <option value="$PROJECT_DIR$/core/classes/toolbox.php" />
         <option value="$PROJECT_DIR$/public_html/assets/incl/init.php" />
-        <option value="$PROJECT_DIR$/public_html/admin/song.php" />
+        <option value="$PROJECT_DIR$/public_html/assets/css/style.scss" />
+        <option value="$PROJECT_DIR$/core/classes/listpresenter.php" />
+        <option value="$PROJECT_DIR$/public_html/assets/js/functions.js" />
+        <option value="$PROJECT_DIR$/public_html/assets/incl/footer.php" />
+        <option value="$PROJECT_DIR$/core/classes/song.php" />
         <option value="$PROJECT_DIR$/public_html/admin/artist.php" />
+        <option value="$PROJECT_DIR$/public_html/admin/song.php" />
+        <option value="$PROJECT_DIR$/data/songbook19-12-2018122018.sql" />
       </list>
     </option>
   </component>
@@ -292,11 +329,11 @@
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="62" />
-    <option name="y" value="66" />
-    <option name="width" value="1280" />
-    <option name="height" value="731" />
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="x" value="18" />
+    <option name="y" value="38" />
+    <option name="width" value="1408" />
+    <option name="height" value="804" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -315,13 +352,7 @@
             <path>
               <item name="Songbook" type="b2602c69:ProjectViewProjectNode" />
               <item name="Songbook" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Songbook" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Songbook" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Songbook" type="b2602c69:ProjectViewProjectNode" />
@@ -333,6 +364,19 @@
               <item name="Songbook" type="462c0819:PsiDirectoryNode" />
               <item name="public_html" type="462c0819:PsiDirectoryNode" />
               <item name="admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Songbook" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Songbook" type="462c0819:PsiDirectoryNode" />
+              <item name="public_html" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Songbook" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Songbook" type="462c0819:PsiDirectoryNode" />
+              <item name="public_html" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="incl" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -351,13 +395,14 @@
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public_html/admin" />
-      <recent name="$PROJECT_DIR$/public_html" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/core/classes" />
       <recent name="$PROJECT_DIR$/public_html/admin" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/core/classes" />
+      <recent name="$PROJECT_DIR$/public_html/admin" />
+      <recent name="$PROJECT_DIR$/public_html" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -371,6 +416,16 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="song.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://songbook.local/public_html/admin/song.php">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.song.php" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -392,7 +447,7 @@
       <workItem from="1544695208100" duration="7601000" />
       <workItem from="1544785661630" duration="13000" />
       <workItem from="1545122645135" duration="1965000" />
-      <workItem from="1545162966603" duration="5925000" />
+      <workItem from="1545162966603" duration="13860000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <created>1544695328414</created>
@@ -450,23 +505,37 @@
       <option name="project" value="LOCAL" />
       <updated>1545169642960</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Update: Toolbox Class">
+      <created>1545203490766</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1545203490766</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Update">
+      <created>1545203579243</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1545203579243</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49094000" />
+    <option name="totallyTimeSpent" value="57029000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="62" y="66" width="1280" height="731" extended-state="0" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22455573" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16595136" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32909605" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32650602" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.35060242" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -489,7 +558,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Update" />
     <MESSAGE value="Opdateret med fuld EDIT (CREATE/UPDATE) funktion" />
     <MESSAGE value="Update: Nu med slette funktion" />
     <MESSAGE value="Update: Nu med klasse filer til artist og song" />
@@ -497,7 +565,9 @@
     <MESSAGE value="Nye updates til class song:&#10;- nye properties/metoder til artist og albums&#10;- forbedring af getAll() metode&#10;- udvidelse af get() metode" />
     <MESSAGE value="Update af sang klasse" />
     <MESSAGE value="Updates:&#10;- Class song med getAll, get, getSongArtist, getSongAlbums&#10;- Nu med comments&#10;- tilføjelse af class loader i core mappe" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updates:&#10;- Class song med getAll, get, getSongArtist, getSongAlbums&#10;- Nu med comments&#10;- tilføjelse af class loader i core mappe" />
+    <MESSAGE value="Update: Toolbox Class" />
+    <MESSAGE value="Update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../snippets/public_html/archive/php/pdo/songbook.php">
@@ -569,20 +639,6 @@
     <entry file="file://$PROJECT_DIR$/../Adminsite/core/classes/formpresenter.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/public_html/assets/incl/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="7" selection-start-column="7" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public_html/assets/css/style.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="653">
-          <caret line="45" column="15" selection-start-line="45" selection-start-column="15" selection-end-line="45" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../games/src/sass/master.scss">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -605,20 +661,6 @@
         <state relative-caret-position="-1460" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/autoload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="3" lean-forward="true" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/classes/song.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1409">
-          <caret line="94" column="47" selection-start-line="94" selection-start-column="47" selection-end-line="94" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/_functions.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -626,24 +668,73 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/classes/toolbox.php">
+    <entry file="file://$PROJECT_DIR$/public_html/assets/incl/init.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-428">
-          <caret line="2" column="23" lean-forward="true" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+        <state relative-caret-position="60">
+          <caret line="4" column="39" lean-forward="true" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public_html/assets/incl/init.php">
+    <entry file="file://$PROJECT_DIR$/public_html/assets/css/style.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="72" selection-start-line="2" selection-start-column="72" selection-end-line="2" selection-end-column="72" />
+        <state relative-caret-position="165">
+          <caret line="61" column="13" selection-start-line="61" selection-start-column="13" selection-end-line="61" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/autoload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/classes/toolbox.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1080">
+          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/classes/listpresenter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="56" selection-start-line="21" selection-start-column="56" selection-end-line="21" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Adminsite/public_html/cms/admin/orgs.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="28" column="34" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/admin/artist.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="5" selection-start-column="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/assets/js/functions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="23" lean-forward="true" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/assets/incl/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="47" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="47" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/classes/artist.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="5" selection-start-column="5" selection-end-column="5" />
+        <state relative-caret-position="588">
+          <caret line="70" selection-start-line="70" selection-end-line="70" />
           <folding>
             <element signature="e#6#87#0#PHP" expanded="true" />
           </folding>
@@ -652,15 +743,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public_html/admin/song.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="56" column="21" selection-start-line="56" selection-start-column="21" selection-end-line="56" selection-end-column="21" />
+        <state relative-caret-position="579">
+          <caret line="200" selection-start-line="200" selection-end-line="200" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public_html/admin/artist.php">
+    <entry file="file://$PROJECT_DIR$/core/classes/song.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="517">
-          <caret line="236" column="8" selection-start-line="236" selection-start-column="8" selection-end-line="236" selection-end-column="8" />
+        <state relative-caret-position="511">
+          <caret line="116" selection-start-line="116" selection-end-line="116" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/songbook19-12-2018122018.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="688">
+          <caret line="75" column="39" selection-start-line="75" selection-start-column="39" selection-end-line="75" selection-end-column="39" />
         </state>
       </provider>
     </entry>

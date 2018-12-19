@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Class song
  * Created By Heinz K
@@ -42,7 +41,7 @@ class song {
 		       "ON song_album_rel.album_id = album.id " .
 		       "LEFT JOIN artist " .
 		       "ON album.artist_id = artist.id " .
-		       "ORDER BY RAND()";
+		       "ORDER BY song.title";
 		$stmt = $this->db->prepare($sql);
 		$stmt->execute();
 		return $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -110,6 +109,19 @@ class song {
 		$stmt->bindParam(":id", $id);
 		$stmt->execute();
 		return $stmt->fetchColumn();
+	}
+
+	public function delete($id) {
+		$this->id = $id;
+
+		$sql = "DELETE song, song_album_rel " .
+	            "FROM song " .
+	            "LEFT JOIN song_album_rel " .
+	            "ON song.id = song_album_rel.song_id " .
+	            "WHERE song.id = :id";
+		$stmt = $this->db->prepare($sql);
+		$stmt->bindParam(":id", $id);
+		$stmt->execute();
 	}
 
 }
