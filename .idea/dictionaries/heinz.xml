@@ -7,6 +7,7 @@
       <w>docroot</w>
       <w>heka</w>
       <w>passwd</w>
+      <w>rowheader</w>
     </words>
   </dictionary>
 </component>

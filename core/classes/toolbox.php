@@ -9,6 +9,9 @@
 class toolbox {
 	private $db;
 
+	const USEHREF = 1;
+	const USEONCLICK = 2;
+
 	public function __construct() {
 		global $db;
 		$this->db = $db;
@@ -69,8 +72,9 @@ class toolbox {
 	 * @param array $attr
 	 * @return string
 	 */
-	static function getIcon($ref, $icon, $attr = array()) {
+	static function getIcon($ref, $icon, $reftype = self::USEHREF, $attr = array()) {
 		$class = isset($attr["class"]) ? $attr["class"] : "icon";
-		return "<a class=\"".$class."\" href=\"".$ref."\"><i class=\"fas fa-".$icon."\"></i></a>\n";
+		$refattr = ($reftype > self::USEHREF) ? " onclick = \"".$ref."\"" : " href=\"".$ref."\"";
+		return "<a class=\"".$class."\" " . $refattr . "><i class=\"fas fa-".$icon."\"></i></a>\n";
 	}
 }

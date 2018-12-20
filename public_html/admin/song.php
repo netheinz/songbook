@@ -20,14 +20,23 @@ switch(strtoupper($mode)) {
 		$song = new song();
 		$rows = [];
 
+        $columns = [
+            "options" => "Handling",
+            "title" => "Titel",
+            "artist" => "Artist",
+            "album" => "Album",
+        ];
+
         foreach($song->getAll() as $values) {
-            $values["options"] = toolbox::getIcon("?mode=edit&id=" . $values["id"], "edit", ["id" => 3]) .
+            $values["options"] = toolbox::getIcon("?mode=edit&id=" . $values["id"], "edit") .
                                  toolbox::getIcon("?mode=details&id=" . $values["id"], "eye") .
-                                 toolbox::getIcon("?mode=delete&id=" . $values["id"], "trash-alt");
+                                 toolbox::getIcon("remove(" . $values["id"] . ")", "trash-alt", toolbox::USEONCLICK);
             $rows[] = $values;
         }
 
-        $p = new listPresenter($song->columns, $rows, "song");
+
+
+        $p = new listPresenter($columns, $rows, "song");
         echo $p->presentlist();
 
 		toolbox::sysFooter();
@@ -45,21 +54,15 @@ switch(strtoupper($mode)) {
 
 	    echo toolbox::getAdminHeader($page_title, "Se detaljer", $arr_buttons);
 
-	    $output = "<div class='row rowheader details'>\n" .
-	               "<div>Felt</div>\n" .
-	               "<div>Værdi</div>\n" .
-	               "</div>\n";
-
 	    $song = new song();
 	    $song->get($id);
-
 	    $row = get_object_vars($song);
-	    foreach($row as $value) {
-	        var_dump($value);
-        }
 
 
-	    echo $output;
+	    /* Kalder class listpresenter og udskriver detaljer */
+	    $p = new listPresenter($song->columns, $row, "details");
+	    echo $p->presentDetails();
+
 	    toolbox::sysFooter();
         break;
 

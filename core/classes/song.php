@@ -15,7 +15,6 @@ class song {
 	public $genre;
 	public $artist;
 	public $albums = [];
-	public $columns;
 	private $db;
 
 	/**
@@ -25,13 +24,6 @@ class song {
 	public function __construct() {
 		global $db;
 		$this->db = $db;
-
-		$this->columns = [
-			"options" => "Handling",
-			"title" => "Titel",
-			"artist" => "Artist",
-			"album" => "Album"
-		];
 	}
 
 	/**
